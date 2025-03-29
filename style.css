@@ -1,0 +1,234 @@
+/* Importando la fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700');
+
+/* Reset de márgenes y padding */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+.footer{
+  height: 100hv;
+}
+
+body{
+  font-family: 'Open Sans Condensed', sans-serif; /* Asignando la fuente */
+  color: #fff; /* Color de texto blanco */
+  min-height: 200vh;
+}
+
+.iconos{
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espacio entre los iconos */
+  margin-top: 20px; /* Espacio superior para los iconos */
+}
+
+.iconos img{
+  width: 50px; /* Ancho de los iconos */
+  height: 50px; /* Alto de los iconos */
+  transition: transform 0.3s ease-in-out; /* Transición suave al hacer hover */
+
+}
+
+.iconos img:hover{
+  transform: scale(1.2); /* Aumenta el tamaño al hacer hover */
+
+}
+
+.informacion {
+  display: flex;
+  font-size: 20px;
+  color: black;
+  max-width: 700px; /* Ancho máximo para la información */
+  margin-top: 300px;
+  text-align: justify;
+  margin-left: 450px; /* Margen izquierdo para centrar el texto */
+
+}
+
+.foto{
+  width: 300px; /* Ancho de la foto */
+  height: 300px; /* Alto de la foto */
+  object-fit: cover;
+  margin-right: 60px;
+}
+
+div{
+  margin: 0;
+  padding: 0;  
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background: transparent; /* Fondo transparente para los divs */
+}
+
+div::before, div::after{
+  content: none;
+}
+
+/* Estilos del video */
+.video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75%;
+  max-width: hidden;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 1;
+}
+
+/* Estilos del menú */
+.menu{
+  font-family: 'Open Sans Condensed', sans-serif; /* Asignando la fuente */
+  background: black; /* Color de fondo para el menú */
+  position: fixed; /* Para mantener el menú en la parte superior */
+  width: 100%; /* Asegura que el menú se extienda por todo el ancho */
+  z-index: 9999; /* Coloca el menú por encima del video */
+  top: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.menu li{
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.menu a{
+  font-size: 22px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  position: relative;
+  padding: 4px 0;
+}
+
+.menu a::before{
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  transition: 0.5s transform ease;
+  transform: scale3d(0,1,1);
+  transform-origin: 0 50%;
+}
+
+.menu a:hover::before{
+  transform: scale3d(1,1,1);
+}
+
+/* Estilos adicionales */
+header{
+  padding: 60px 0;
+  margin-top: 50px;
+  margin-left: 500px;
+}
+
+.contenedor{
+    margin-top: 50px; /* Ajusta el valor para moverlo más cerca del video */
+    margin-bottom: 10px; /* Reducir el margen inferior */
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+nombre{
+    margin-top: 50px;
+    background-color: transparent;
+    border-radius: 5px;   
+    }
+
+    .nombre h1{
+        text-align: center;
+        margin-top: 10px; /* Reducir el espacio superior entre los elementos */
+        margin: left 500px; /* Eliminar el margen izquierdo */
+
+    }
+
+
+/* Ajuste para los párrafos y encabezados dentro del contenedor */
+.contenedor p, .contenedor h1 {
+  text-align: center;
+  margin-top: 200px; /* Reducir el espacio superior entre los elementos */
+}
+
+
+/* Ajuste general de margen entre los elementos */
+.curriculum, .ingeniero {
+    margin-bottom: 10px; /* Reducir el espacio entre el curriculum y el ingeniero */
+}
+
+/* Responsive styles for different screen sizes */
+
+/* Mobile devices (width <= 600px) */
+@media (max-width: 600px) {
+  .menu li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .contenedor {
+    margin: 20px;
+    padding: 10px;
+  }
+
+  .contenedor p, .contenedor h1 {
+    margin-left: 0; /* Eliminar el margen para pantallas pequeñas */
+  }
+
+  .video {
+    height: 50%;
+  }
+
+  header {
+    margin-left: 0; /* Asegura que el encabezado se ajuste a pantallas pequeñas */
+  }
+}
+
+/* Tablets (width <= 768px) */
+@media (max-width: 768px) {
+  .menu li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  .contenedor {
+    margin: 30px;
+    padding: 15px;
+  }
+}
+
+/* Desktops (width >= 1024px) */
+@media (min-width: 1024px) {
+  .menu {
+    padding: 30px 0;
+  }
+
+  .menu li {
+    margin: 0 25px;
+  }
+
+  .contenedor {
+    margin: 80px 10px;
+    padding: 20px;
+  }
+
+  header {
+    margin-left: 500px; /* Ajustar para pantallas grandes */
+  }
+}
