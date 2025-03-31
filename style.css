@@ -15,6 +15,8 @@
   background-color: black; /* O el color que prefieras */
 }
 
+
+
 body{
   font-family: 'Open Sans Condensed', sans-serif; /* Asignando la fuente */
   color: #fff; /* Color de texto blanco */
@@ -44,12 +46,84 @@ body{
   display: flex;
   font-size: 20px;
   color: black;
-  max-width: 1000px; /* Ancho máximo para la información */
+  max-width: 1000px;
   margin-top: 300px;
   text-align: justify;
-  margin-left: 300px; /* Margen izquierdo para centrar el texto */
-
+  margin-left: 300px;
+  align-items: center; /* Asegura que los elementos se alineen verticalmente */
 }
+
+.foto {
+  margin-right: 30px; /* Espacio entre la foto y la información */
+}
+
+.texto-informacion {
+  max-width: 600px; /* Limitar el ancho del texto */
+}
+
+.botones {
+  margin-top: 20px; /* Espacio superior para los botones */
+  display: flex;
+  justify-content: flex-end; /* Alinea los botones a la derecha */
+}
+
+.btn {
+  background-color: #191970; /* Fondo oscuro */
+  color: white; /* Color de texto blanco */
+  padding: 10px 20px; /* Relleno dentro de los botones */
+  margin: 10px; /* Margen entre los botones */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 18px; /* Tamaño de fuente */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Transición suave en el color de fondo */
+}
+
+.btn:hover {
+  background-color: #4169e1; /* Color más claro al pasar el mouse */
+}
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenido del modal */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+}
+
+/* Botón de cerrar */
+.close {
+  position: absolute;
+  top: -125px;
+  right: -40px;
+  font-size: 200px;
+  font-weight: bold;
+  cursor: pointer;
+  color: red;
+}
+
+.close:hover {
+  color: red;
+}
+
+
+
+
+
 
 .foto{
   width: 300px; /* Ancho de la foto */
@@ -563,5 +637,7 @@ html{
 #intereses {
   scroll-margin-top: 20vh; /* Ajusta este valor según el tamaño de tu menú */
 }
+
+
 
 
