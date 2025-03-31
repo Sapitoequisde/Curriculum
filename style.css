@@ -9,13 +9,16 @@
 }
 
 .footer{
-  height: 100hv;
+  height: auto;
+  /* O si prefieres que tenga un mínimo alto */
+  min-height: 150px; /* Puedes ajustar el valor según lo que necesites */
+  background-color: black; /* O el color que prefieras */
 }
 
 body{
   font-family: 'Open Sans Condensed', sans-serif; /* Asignando la fuente */
   color: #fff; /* Color de texto blanco */
-  min-height: 200vh;
+  min-height: 500vh;
 }
 
 .iconos{
@@ -41,10 +44,10 @@ body{
   display: flex;
   font-size: 20px;
   color: black;
-  max-width: 700px; /* Ancho máximo para la información */
+  max-width: 1000px; /* Ancho máximo para la información */
   margin-top: 300px;
   text-align: justify;
-  margin-left: 450px; /* Margen izquierdo para centrar el texto */
+  margin-left: 300px; /* Margen izquierdo para centrar el texto */
 
 }
 
@@ -53,9 +56,328 @@ body{
   height: 300px; /* Alto de la foto */
   object-fit: cover;
   margin-right: 60px;
+  border-radius: 50%; /* Hace la imagen circular */
 }
 
-div{
+.unison-logo {
+  display: flex;
+  justify-content: flex-start; /* Alinea la imagen a la izquierda */
+  align-items: center; /* Alinea la imagen verticalmente */
+  margin-left: 150px; /* Espacio a la izquierda entre la imagen y el texto */
+  margin-top: 70px;  /* Aumenta este valor para mover el logo hacia abajo */
+}
+
+.unison-logo img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.educacion {
+  display: flex;
+  justify-content: flex-start; /* Alinea los elementos a la izquierda */
+  align-items: flex-start; /* Alinea los elementos al principio en el eje vertical */
+  background-color: #1b4f72;
+  min-height: 60vh;
+  padding: 20px;
+  color: white;
+  margin-top: 100px; /* Espacio superior para la sección de educación */
+}
+
+.texto {
+  display: flex;
+  flex-direction: column; /* Los elementos dentro de este contenedor estarán en columna */
+  justify-content: flex-start; /* Alinea el contenido hacia el inicio */
+  margin-top: 100px; /* Espacio superior para el texto */
+}
+
+.educacion h1,
+.educacion p {
+  margin-left: 200px; /* Elimina márgenes predeterminados */
+  text-align: center;
+  padding: 10px 0; /* Añade espacio entre las líneas */
+  font-size: 20px; /* Tamaño del texto */
+}
+
+.educacion h1 {
+  font-size: 100px;
+  margin-bottom: 10px; /* Espacio entre el título y el párrafo */
+
+}
+
+.educacion p {
+  font-size: 30px;
+  text-align: left; /* Alineamos el texto a la izquierda */
+}
+
+.habilidades-tecnicas {
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos estén en columnas */
+  align-items: center; /* Centra horizontalmente */
+  background-color: #87CEFA;
+  min-height: 60vh;
+  padding: 20px;
+  color: white;
+}
+
+.habilidades-tecnicas h1{
+  display: flex;
+  align-items: center; /* Alinea el h1 y la lista en la misma línea */
+  gap: 20px; /* Espacio entre el h1 y la lista */
+  color: #191970;
+  margin-top:50px; /* Espacio superior para el encabezado */
+  font-size: 50px; /* Tamaño del encabezado */
+}
+
+.habilidades-tecnicas ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 49px; /* Espacio entre el h1 y la lista */
+
+}
+
+.habilidades-tecnicas li {
+  display: list-item;
+  margin-bottom: 10px;
+  font-size: 20px;
+  margin-left: 0px;
+  color: #191970;
+}
+
+.habilidades-tecnicas p{
+  margin-top: 50px; /* Espacio de 50px debajo del encabezado */
+  text-align: justify; /* Centra el texto */
+  max-width: 600px;
+  color: #191970;
+
+}
+
+.habilidades-tecnicas img{
+  width: 50px; /* Ancho de los iconos */
+  height: 50px; /* Alto de los iconos */
+  transition: transform 0.3s ease-in-out; /* Transición suave al hacer hover */
+  margin-left: 10px; /* Espacio a la izquierda entre el icono y el texto */
+  margin-top: 20px; /* Espacio superior para el icono */
+}
+
+.proyectos {
+ 
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  min-height: 60vh; /* Define una altura mínima para que se vea bien centrado */ /* Alinea el texto al centro */
+  background-color: #1b4f72; /* Color de fondo */
+  min-height: 500px;
+;
+}
+
+.proyectos h1{
+  font-size: 60px;
+  color: #fff; /* Color de texto blanco */
+  margin-bottom: 120px; /* Espacio superior para el encabezado */
+}
+
+.proyectos p{
+  font-size: 18px; /* Tamaño del texto */
+  color: #fff; /* Color de texto blanco */
+  text-align: justify; /* Alinea el texto al centro */
+  margin-top: 0px; /* Espacio superior para el párrafo */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.proyectos .imagenes{
+  width: 150px; /* Ancho de las imágenes */
+  height: 150px; /* Alto de las imágenes */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Espacio entre las imágenes */
+  margin-bottom: 120px; /* Espacio inferior para la sección de proyectos */
+
+
+}
+
+.proyectos .imagenes img {
+  width: 200px; /* Establece el ancho de las imágenes */
+  height: 200px; /* Establece la altura de las imágenes */
+  object-fit: cover; /* Ajusta las imágenes sin distorsionarlas */
+  margin-top: 100px;
+  border-radius: 10px;
+}
+
+.idiomas {
+  width: 100%;  /* Ajusta el ancho igual que la sección de educación */
+  margin: auto;
+  text-align: center;
+  padding: 40px 0;
+  background-color: #87CEFA;
+  min-height:60vh; /* Altura mínima para la sección de idiomas */
+}
+
+.idiomas h1 {
+
+  font-size: 80px;
+  margin-bottom: 20px;
+  color: #191970; /* Color del encabezado */
+  text-align: center; /* Centra el texto */
+}
+
+.idiomas h2{
+  color: #191970; /* Color del encabezado */
+}
+
+.idiomas p {
+  color: #191970;
+}
+
+.idioma-container {
+  margin-top: 100px; /* Espacio superior para la sección de idiomas */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.idioma {
+  display: flex;
+  align-items: center;
+  width: 50%; /* Ajusta el tamaño igual que educación */
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);;
+}
+
+.idioma img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.info {
+  width: 100%;
+}
+
+.barra {
+  width: 100%;
+  height: 12px;
+  background-color: #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.nivel {
+  height: 100%;
+  background-color: #007bff;
+  border-radius: 6px;
+}
+
+
+.info {
+  text-align: left;
+  width: 60%;
+}
+
+.barra {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.nivel {
+  height: 100%;
+  background-color: #007bff;
+  border-radius: 5px;
+}
+
+.intereses {
+  width: 100%; /* Ajusta el ancho igual que otras secciones */
+  margin: auto;
+  text-align: center;
+  padding: 40px 0;
+  background-color: #f4f4f4;
+  min-height: 60vh; /* Altura mínima para la sección de intereses */
+  background-color: #1b4f72;
+}
+
+.intereses h1 {
+  font-size: 80px;
+  margin-bottom: 20px;
+  color: white; /* Color del encabezado */
+  text-align: center; /* Centra el texto */
+}
+
+.intereses-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  margin-top:100px;
+}
+
+.interes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 150px; /* Tamaño uniforme para cada ítem */
+  text-align: center;
+  background-color: #87CEFA;
+}
+
+.interes img {
+  width: 80px; /* Ajusta el tamaño de las imágenes */
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.interes p {
+  font-size: 18px;
+  color: #333; /* Color del texto */
+}
+
+.contacto {
+  display: flex;
+  flex-direction: column; /* Apila los elementos en columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  text-align: center;
+  background-color: black;
+  min-height: 60vh;
+  padding: 20px;
+  color: white;
+  margin-top: 0px;
+}
+
+.contacto p {
+  font-size: 20px; /* Tamaño del texto */
+  color: #fff; /* Color de texto blanco */
+  text-align: center;
+  margin-top: 20px; /* Opcional: Añade un poco de espacio superior al párrafo */
+}
+
+.contacto img {
+  width: 50px; /* Ancho de los iconos */
+  height: 50px; /* Alto de los iconos */
+  transition: transform 0.3s ease-in-out; /* Transición suave al hacer hover */
+  margin-top: 20px; /* Añade espacio entre el icono y el texto */
+}
+
+.contacto .contacto-texto h1{
+  font-size: 80px; /* Tamaño del encabezado */
+}
+
+
+div {
   margin: 0;
   padding: 0;  
   border: none;
@@ -75,7 +397,7 @@ div::before, div::after{
   left: 0;
   width: 100%;
   height: 75%;
-  max-width: hidden;
+  overflow: hidden;
   overflow: hidden;
   z-index: -1;
   opacity: 1;
@@ -147,16 +469,10 @@ header{
     border-radius: 5px;
 }
 
-nombre{
-    margin-top: 50px;
-    background-color: transparent;
-    border-radius: 5px;   
-    }
-
     .nombre h1{
         text-align: center;
         margin-top: 10px; /* Reducir el espacio superior entre los elementos */
-        margin: left 500px; /* Eliminar el margen izquierdo */
+       
 
     }
 
@@ -232,3 +548,20 @@ nombre{
     margin-left: 500px; /* Ajustar para pantallas grandes */
   }
 }
+
+html{
+  scroll-behavior: smooth; /* Habilitar desplazamiento suave */
+}
+
+/* Ajuste para que el scroll no cubra el contenido */
+#inicio,
+#informacion\ personal,
+#educacion,
+#habilidades\ tecnicas,
+#proyectos,
+#idiomas,
+#intereses {
+  scroll-margin-top: 20vh; /* Ajusta este valor según el tamaño de tu menú */
+}
+
+
